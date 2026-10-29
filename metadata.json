@@ -1,0 +1,6 @@
+{
+  "name": "Cybersecurity Knowledge Source",
+  "description": "An organized, comprehensive web, server, and cloud cyberattacks knowledge base with detailed remediation, structural search, and future AI schema roadmap.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

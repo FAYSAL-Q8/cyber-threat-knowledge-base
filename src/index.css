@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-accent: #CCFF00;
+  --color-bg-dark: #0D0D0D;
+}
+
+/* Custom design template overrides for smooth UX: rounded corners */
+button, input, select, textarea, pre {
+  border-radius: 0.5rem; /* 8px smooth visual edges */
+}
+
+/* Rounded containers for cards and layout divisions to avoid sharp borders */
+.bg-black, 
+.bg-zinc-955, 
+.bg-zinc-950, 
+.bg-zinc-900, 
+.bg-\[\#121212\], 
+.bg-\[\#0D0D0D\],
+.bg-\[\#09090b\] {
+  border-radius: 0.75rem; /* 12px smooth cards */
+}
+
+/* Base body dynamic background color */
+body {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Define missing zinc and feedback utility classes for dark mode visibility */
+.bg-zinc-955 {
+  background-color: #141416;
+}
+.bg-zinc-955\/2 {
+  background-color: rgba(20, 20, 22, 0.2);
+}
+.bg-amber-955\/2 {
+  background-color: rgba(245, 158, 11, 0.02);
+}
+.bg-amber-955\/5 {
+  background-color: rgba(245, 158, 11, 0.05);
+}
+.bg-red-955\/2 {
+  background-color: rgba(239, 68, 68, 0.02);
+}
+.bg-red-955\/5 {
+  background-color: rgba(239, 68, 68, 0.05);
+}
+.bg-emerald-955\/2 {
+  background-color: rgba(16, 185, 129, 0.02);
+}
+
+.text-zinc-305 {
+  color: #dbdbe0;
+}
+.text-zinc-350 {
+  color: #c9c9ce;
+}
+.text-zinc-405 {
+  color: #a1a1aa;
+}
+.text-zinc-450 {
+  color: #8c8c93;
+}
+.text-zinc-550 {
+  color: #71717a;
+}
+.text-zinc-650 {
+  color: #52525b;
+}
+
+/* Dynamic Swiss light mode styling system variables override */
+.light {
+  /* Layout backgrounds */
+  & .bg-\[\#0D0D0D\] {
+    background-color: #F8F9FA !important;
+  }
+  & .bg-\[\#0D0D0D\]\/95 {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(12px) !important;
+  }
+  & .bg-\[\#0D0D0D\]\/98 {
+    background-color: rgba(255, 255, 255, 0.98) !important;
+  }
+  & .bg-black {
+    background-color: #FFFFFF !important;
+  }
+  & .bg-\[\#121212\] {
+    background-color: #F1F3F5 !important;
+  }
+  & .bg-\[\#121212\]\/30 {
+    background-color: rgba(0, 0, 0, 0.04) !important;
+  }
+  & .bg-\[\#121212\]\/50 {
+    background-color: rgba(0, 0, 0, 0.06) !important;
+  }
+  & .bg-zinc-955 {
+    background-color: #F8F9FA !important;
+  }
+  & .bg-zinc-950 {
+    background-color: #E9ECEF !important;
+  }
+  & .bg-zinc-950\/85 {
+    background-color: #F1F3F5 !important;
+  }
+  & .bg-zinc-950\/40 {
+    background-color: #F4F5F6 !important;
+  }
+  & .bg-zinc-900 {
+    background-color: #E9ECEF !important;
+  }
+  & .bg-zinc-900\/30 {
+    background-color: rgba(0, 0, 0, 0.04) !important;
+  }
+  & .bg-zinc-900\/50 {
+    background-color: rgba(0, 0, 0, 0.08) !important;
+  }
+  & .bg-\[\#09090b\] {
+    background-color: #FFFFFF !important;
+  }
+  & .bg-\[\#09090b\]\/40 {
+    background-color: #F8F9FA !important;
+  }
+  & .bg-red-955\/2 {
+    background-color: #FFF5F5 !important;
+  }
+  & .bg-red-955\/5 {
+    background-color: #FFE3E3 !important;
+  }
+  & .bg-red-955 {
+    background-color: #FFF5F5 !important;
+  }
+  & .bg-red-950\/20 {
+    background-color: #FFE3E3 !important;
+  }
+  & .bg-\[\#CCFF00\]\/10 {
+    background-color: #E6FCF5 !important;
+  }
+  & .bg-\[\#CCFF00\]\/5 {
+    background-color: #E6FCF5 !important;
+  }
+  & .bg-\[\#CCFF00\]\/2 {
+    background-color: #E6FCF5 !important;
+  }
+  & .bg-\[\#CCFF00\]\/1 {
+    background-color: #F4FBF7 !important;
+  }
+  & .bg-zinc-955\/2 {
+    background-color: #FAFAFA !important;
+  }
+  & .bg-emerald-955\/2 {
+    background-color: #E6FCF5 !important;
+  }
+  & .bg-zinc-950\/20 {
+    background-color: #FAFAFA !important;
+  }
+  & .bg-zinc-950\/50 {
+    background-color: #F8F9FA !important;
+  }
+  & .bg-zinc-950\/60 {
+    background-color: #F1F3F5 !important;
+  }
+  & .bg-zinc-950\/80 {
+    background-color: #ECEFF1 !important;
+  }
+  & .bg-zinc-950\/95 {
+    background-color: #FFFFFF !important;
+  }
+  & .bg-zinc-900\/40 {
+    background-color: rgba(0, 0, 0, 0.05) !important;
+  }
+  & .bg-zinc-900\/60 {
+    background-color: rgba(0, 0, 0, 0.08) !important;
+  }
+  & .bg-black\/30 {
+    background-color: #FFFFFF !important;
+  }
+  & .bg-black\/40 {
+    background-color: #FFFFFF !important;
+  }
+  & .bg-black\/50 {
+    background-color: #FFFFFF !important;
+  }
+  & .bg-black\/60 {
+    background-color: #FFFFFF !important;
+  }
+  & .bg-black\/70 {
+    background-color: #FFFFFF !important;
+  }
+  & .bg-black\/95 {
+    background-color: #FFFFFF !important;
+  }
+  & .bg-black\/90 {
+    background-color: #FFFFFF !important;
+  }
+
+  /* Support high-contrast amber/yellow colors in light mode */
+  & .bg-amber-955\/2 {
+    background-color: #FFF9DB !important;
+  }
+  & .bg-amber-955\/5 {
+    background-color: #FFF3BF !important;
+  }
+  & .bg-amber-950\/5 {
+    background-color: #FFF3BF !important;
+  }
+  & .bg-amber-950\/20 {
+    background-color: #FFE066 !important;
+  }
+
+  /* Structural thin line borders */
+  & .border-white\/10 {
+    border-color: #CED4DA !important; /* Made darker for better section layout definition */
+  }
+  & .border-white\/5 {
+    border-color: #E2E8F0 !important;
+  }
+  & .border-white\/12 {
+    border-color: #CED4DA !important;
+  }
+  & .border-zinc-900 {
+    border-color: #E2E8F0 !important;
+  }
+  & .border-zinc-800 {
+    border-color: #DEE2E6 !important;
+  }
+  & .border-zinc-700 {
+    border-color: #CED4DA !important;
+  }
+  & .divide-white\/5 > * + * {
+    border-color: #E2E8F0 !important;
+  }
+  & .divide-white\/10 > * + * {
+    border-color: #CED4DA !important;
+  }
+
+  & .border-red-500\/10 {
+    border-color: rgba(197, 30, 30, 0.25) !important;
+  }
+  & .border-red-500\/15 {
+    border-color: rgba(197, 30, 30, 0.25) !important;
+  }
+  & .border-red-500\/20 {
+    border-color: rgba(197, 30, 30, 0.25) !important;
+  }
+  & .border-amber-500\/15 {
+    border-color: rgba(230, 119, 0, 0.25) !important;
+  }
+  & .border-amber-500\/20 {
+    border-color: rgba(230, 119, 0, 0.25) !important;
+  }
+
+  /* Core text coloring rules - optimized for maximum WCAG contrast */
+  & .text-\[\#F2F2F2\] {
+    color: #1A1D20 !important;
+  }
+  & .text-zinc-50 {
+    color: #121416 !important;
+  }
+  & .text-zinc-100 {
+    color: #1B1E21 !important;
+  }
+  & .text-white {
+    color: #121416 !important;
+  }
+  & .text-zinc-200 {
+    color: #212529 !important;
+  }
+  & .text-zinc-300 {
+    color: #2B2F33 !important;
+  }
+  & .text-zinc-350 {
+    color: #343A40 !important;
+  }
+  & .text-zinc-400 {
+    color: #3E444B !important;
+  }
+  & .text-zinc-405 {
+    color: #495057 !important;
+  }
+  & .text-zinc-450 {
+    color: #495057 !important;
+  }
+  & .text-zinc-500 {
+    color: #4E555C !important;
+  }
+  & .text-zinc-550 {
+    color: #555C63 !important;
+  }
+  & .text-zinc-650 {
+    color: #6C757D !important;
+  }
+  & .text-zinc-800\/40 {
+    color: rgba(0, 0, 0, 0.22) !important;
+  }
+
+  /* Support bold colored texts in light mode to override soft dark-mode accents */
+  & .text-red-200 {
+    color: #A61C1C !important;
+  }
+  & .text-red-350 {
+    color: #9C1C1C !important;
+  }
+  & .text-red-200\/90 {
+    color: #A61C1C !important;
+  }
+  & .text-red-300 {
+    color: #9C1C1C !important;
+  }
+  & .text-red-400 {
+    color: #C92A2A !important;
+  }
+  & .text-emerald-400 {
+    color: #125F2C !important;
+  }
+  & .text-emerald-500 {
+    color: #0E4E23 !important;
+  }
+  & .text-emerald-600 {
+    color: #0E4E23 !important;
+  }
+  & .text-amber-400 {
+    color: #D9480F !important;
+  }
+  & .text-amber-500 {
+    color: #AD4E00 !important;
+  }
+
+  /* Make placeholder text clearly visible yet distinct */
+  & ::placeholder {
+    color: #6C757D !important;
+    opacity: 1 !important;
+  }
+
+  /* Input focus borders contrast booster */
+  & input[type="text"]:focus, & textarea:focus, & select:focus {
+    border-color: #121415 !important;
+  }
+
+  /* Interactive and custom component highlights */
+  & nav.bg-black {
+    background-color: #F1F3F5 !important;
+  }
+  & .hover\:bg-zinc-900\/30:hover {
+    background-color: rgba(0, 0, 0, 0.08) !important;
+  }
+  & .hover\:bg-zinc-900\/50:hover {
+    background-color: rgba(0, 0, 0, 0.12) !important;
+  }
+  & .hover\:bg-zinc-900:hover {
+    background-color: #E9ECEF !important;
+  }
+  & .bg-\[\#CCFF00\] {
+    background-color: #121415 !important;
+    color: #FFFFFF !important;
+  }
+  & .bg-\[\#CCFF00\]:hover {
+    background-color: #343A40 !important;
+  }
+  & .text-\[\#CCFF00\] {
+    color: #121415 !important;
+  }
+  & .text-\[\#CCFF00\]\/85 {
+    color: #121415 !important;
+  }
+  & .text-\[\#CCFF00\]\/80 {
+    color: #1a1d20 !important;
+  }
+  & .hover\:text-\[\#CCFF00\]\:hover {
+    color: #121415 !important;
+  }
+  & .border-\[\#CCFF00\] {
+    border-color: #121415 !important;
+  }
+  & .border-\[\#CCFF00\]\/20 {
+    border-color: #CED4DA !important;
+  }
+  & .border-emerald-500\/10 {
+    border-color: rgba(40, 167, 69, 0.25) !important;
+  }
+
+  /* Specific code block preserving background look */
+  & pre, & .font-mono.p-4.text-xs {
+    background-color: #121416 !important;
+    color: #E9ECEF !important;
+  }
+}
+
