@@ -5,4 +5,4 @@ Allow: /
 Crawl-delay: 0
 
 # Host & Sitemap specifications
-Sitemap: https://cybersecurity-knowledge-source.vercel.app/sitemap.xml
+Sitemap: https://cyberthreats-base.vercel.app/sitemap.xml
